@@ -1,0 +1,10 @@
+name: echo sample
+on: ['push']
+
+jobs:
+  echo:
+    steps:
+    - uses: docker://ubuntu:18.04
+      with:
+        entrypoint: /bin/echo
+        args: test desu
