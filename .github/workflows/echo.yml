@@ -8,4 +8,4 @@ jobs:
     - uses: docker://ubuntu:18.04
       with:
         entrypoint: /bin/echo
-        args: test desu
+        args: "`echo test desu`"
