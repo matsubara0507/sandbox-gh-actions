@@ -5,7 +5,9 @@ jobs:
   echo:
     runs-on: ubuntu-18.04
     steps:
+    - run: TEMP=`echo test temp`
+      shell: bash
     - uses: docker://ubuntu:18.04
       with:
         entrypoint: /bin/echo
-        args: "`echo test desu`"
+        args: $TEMP
